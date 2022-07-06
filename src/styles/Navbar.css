@@ -1,0 +1,24 @@
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 70px;
+  padding: 10px;
+  background-image: linear-gradient(
+    to bottom right,
+    rgb(133, 34, 133),
+    rgb(57, 21, 67)
+  );
+}
+
+.nav-title {
+  font-size: larger;
+  font-weight: 700;
+  color: antiquewhite;
+  margin-left: 15px;
+}
+
+.nav-logo {
+  width: 60px;
+  object-fit: contain;
+}

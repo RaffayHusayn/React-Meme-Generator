@@ -1,0 +1,27 @@
+.form-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 40px 40px;
+  width: 60%;
+  margin: 50px auto;
+  gap: 30px;
+  justify-content: end;
+}
+
+.form-btn {
+  grid-column: span 2;
+  background-image: linear-gradient(
+    to bottom right,
+    rgb(133, 34, 133),
+    rgb(57, 21, 67)
+  );
+  color: antiquewhite;
+  font-size: larger;
+  cursor: pointer;
+}
+
+.form-input {
+  text-indent: 0.5rem;
+  border: 1px solid #d5d4d8;
+  border-radius: 5px;
+}

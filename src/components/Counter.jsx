@@ -1,0 +1,32 @@
+import { useState } from "react";
+import "../styles/Counter.css";
+
+function Counter() {
+  const [counter, setCounter] = useState(0);
+  function addCounter() {
+    setCounter((prevCounter) => prevCounter + 1);
+  }
+  function minusCounter() {
+    setCounter((prevCounter) => {
+      if (prevCounter > 0) {
+        return prevCounter - 1;
+      } else {
+        return 0;
+      }
+    });
+  }
+
+  return (
+    <div className="timer-container">
+      <button className="timer-btn timer-minus" onClick={minusCounter}>
+        -
+      </button>
+      <div className="timer-display">{counter}</div>
+      <button className="timer-btn timer-plus" onClick={addCounter}>
+        +
+      </button>
+    </div>
+  );
+}
+
+export default Counter;

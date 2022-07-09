@@ -2,12 +2,13 @@ import { useState } from "react";
 import "../styles/Navbar.css";
 import Pepe from "../images/pepe.png";
 function Navbar() {
-  const [logo, setLogo] = useState("Meme Generator");
+  let [logo, setLogo] = useState(1);
   function onImgClick() {
     setLogo("Don't touch me, Creep");
     setTimeout(() => {
-      setLogo("Meme Generator");
-    }, 2000);
+      logo++;
+      setLogo(logo);
+    }, 1000);
   }
   return (
     <nav className="navbar">

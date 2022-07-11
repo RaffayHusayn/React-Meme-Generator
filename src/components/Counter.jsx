@@ -16,6 +16,10 @@ function Counter() {
     });
   }
 
+  function resetCounter() {
+    setCounter(0);
+  }
+
   return (
     <div className="timer-container">
       <button className="timer-btn timer-minus" onClick={minusCounter}>
@@ -24,6 +28,9 @@ function Counter() {
       <div className="timer-display">{counter}</div>
       <button className="timer-btn timer-plus" onClick={addCounter}>
         +
+      </button>
+      <button className="timer-reset" onClick={resetCounter}>
+        Reset
       </button>
     </div>
   );

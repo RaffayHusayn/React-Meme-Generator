@@ -18,10 +18,17 @@
   color: antiquewhite;
   font-size: larger;
   cursor: pointer;
+  border: none;
 }
 
 .form-input {
   text-indent: 0.5rem;
   border: 1px solid #d5d4d8;
   border-radius: 5px;
+}
+
+.meme-img {
+  width: 500px;
+  height: 500px;
+  object-fit: cover;
 }

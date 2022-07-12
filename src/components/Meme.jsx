@@ -35,7 +35,7 @@ function Meme() {
           Get a new meme
         </button>
       </div>
-      <img alt="" id="meme-img" src={memeImg} />
+      <img alt="" className="meme-img" src={memeImg} />
       <p id="para-el"></p>
     </main>
   );

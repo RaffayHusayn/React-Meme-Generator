@@ -1,0 +1,25 @@
+.list-container {
+  border: 2px solid red;
+}
+
+.list-add-btn {
+  width: 150px;
+  height: 50px;
+  background-image: linear-gradient(
+    to bottom right,
+    rgb(133, 34, 133),
+    rgb(57, 21, 67)
+  );
+  border-radius: 20px;
+  border: none;
+  font-size: larger;
+  font-weight: 800;
+  color: whitesmoke;
+}
+.list-add-btn:hover {
+  background-image: linear-gradient(
+    to bottom right,
+    rgb(166, 47, 166),
+    rgb(88, 33, 103)
+  );
+}

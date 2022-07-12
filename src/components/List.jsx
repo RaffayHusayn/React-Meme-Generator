@@ -2,23 +2,33 @@ import { useState } from "react";
 import "../styles/List.css";
 function List() {
   const [thingsArray, setThingsArray] = useState(["thing 1", "thing 2"]);
-  function addThing() {
+  function pushThing() {
     setThingsArray((prevArray) => {
       //   let arr = new Array().concat(prevArray);
       //   arr.push(`thing ${prevArray.length + 11}`);
       //   return arr;
+
       //doing the same thing using spread in single line
       return [...prevArray, `thing ${prevArray.length + 1}`];
     });
   }
 
+  function popThing() {
+    setThingsArray((prevArray) => {
+      return [...prevArray.slice(0, -1)];
+    });
+  }
+
   return (
     <div className="list-container">
-      <button className="list-add-btn" onClick={addThing}>
-        Add Item
+      <button className="list-btn" onClick={pushThing}>
+        Push Item
+      </button>
+      <button className="list-btn" onClick={popThing}>
+        Pop Item
       </button>
       {thingsArray.map((item) => {
-        return <p>{item}</p>;
+        return <h1>{item}</h1>;
       })}
     </div>
   );

@@ -1,8 +1,4 @@
-.list-container {
-  border: 2px solid red;
-}
-
-.list-add-btn {
+.list-btn {
   width: 150px;
   height: 50px;
   background-image: linear-gradient(
@@ -15,8 +11,9 @@
   font-size: larger;
   font-weight: 800;
   color: whitesmoke;
+  margin: 10px;
 }
-.list-add-btn:hover {
+.list-btn:hover {
   background-image: linear-gradient(
     to bottom right,
     rgb(166, 47, 166),

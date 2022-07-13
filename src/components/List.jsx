@@ -28,7 +28,7 @@ function List() {
         Pop Item
       </button>
       {thingsArray.map((item) => {
-        return <h1>{item}</h1>;
+        return <h1 key={item}>{item}</h1>;
       })}
     </div>
   );

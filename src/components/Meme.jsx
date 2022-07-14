@@ -21,10 +21,12 @@ function Meme() {
     const memeArray = allMemeImages.data.memes;
     const maxNum = memeArray.length - 1;
     const url = memeArray[randomNum(maxNum)].url;
-    setMeme({
-      topText: "",
-      bottomText: "",
-      randomImage: url,
+    setMeme((prevMeme) => {
+      return {
+        //spreading an object and then changing one attribute late
+        ...prevMeme,
+        randomImage: url,
+      };
     });
   }
 

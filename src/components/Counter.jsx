@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "../styles/Counter.css";
+import Count from "./Count";
 
 function Counter() {
   const [counter, setCounter] = useState(0);
@@ -25,7 +26,7 @@ function Counter() {
       <button className="timer-btn timer-minus" onClick={minusCounter}>
         -
       </button>
-      <div className="timer-display">{counter}</div>
+      <Count number={counter} />
       <button className="timer-btn timer-plus" onClick={addCounter}>
         +
       </button>

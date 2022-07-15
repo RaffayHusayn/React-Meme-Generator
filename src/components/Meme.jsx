@@ -8,7 +8,7 @@ function Meme() {
     return num;
   }
 
-  const [allMemeImages, setAllMemeImages] = useState(memeObj);
+  const [allMemeImages] = useState(memeObj);
 
   const [meme, setMeme] = useState({
     topText: "",

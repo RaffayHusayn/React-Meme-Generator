@@ -1,5 +1,7 @@
 import { useState } from "react";
 import "../styles/List.css";
+import ListItem from "./ListItem";
+
 function List() {
   const [thingsArray, setThingsArray] = useState(["thing 1", "thing 2"]);
   function pushThing() {
@@ -19,6 +21,12 @@ function List() {
     });
   }
 
+  function handleRemove(id) {
+    setThingsArray((prevArray) => {
+      return prevArray.filter((item) => item !== id);
+    });
+  }
+
   return (
     <div className="list-container">
       <button className="list-btn" onClick={pushThing}>
@@ -28,7 +36,14 @@ function List() {
         Pop Item
       </button>
       {thingsArray.map((item) => {
-        return <h1 key={item}>{item}</h1>;
+        return (
+          <ListItem
+            key={item}
+            id={item}
+            item={item}
+            handleRemove={handleRemove}
+          />
+        );
       })}
     </div>
   );

@@ -23,12 +23,12 @@ function Counter() {
 
   return (
     <div className="timer-container">
-      <button className="timer-btn timer-minus" onClick={minusCounter}>
-        -
+      <button className="timer-btn" onClick={minusCounter}>
+        <h1>-</h1>
       </button>
       <Count number={counter} />
-      <button className="timer-btn timer-plus" onClick={addCounter}>
-        +
+      <button className="timer-btn" onClick={addCounter}>
+        <h1>+</h1>
       </button>
       <button className="timer-reset" onClick={resetCounter}>
         Reset

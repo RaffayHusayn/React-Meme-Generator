@@ -15,12 +15,6 @@ function List() {
     });
   }
 
-  function popThing() {
-    setThingsArray((prevArray) => {
-      return [...prevArray.slice(0, -1)];
-    });
-  }
-
   function handleRemove(id) {
     setThingsArray((prevArray) => {
       return prevArray.filter((item) => item !== id);
@@ -30,10 +24,7 @@ function List() {
   return (
     <div className="list-container">
       <button className="list-btn" onClick={pushThing}>
-        Push Item
-      </button>
-      <button className="list-btn" onClick={popThing}>
-        Pop Item
+        Add Item
       </button>
       {thingsArray.map((item) => {
         return (
